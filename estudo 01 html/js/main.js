@@ -48,3 +48,17 @@ function menosDois() {
     total = total - 2
     document.querySelector('#localResult').innerText = total
 }
+
+
+// DIA DA SEMANA
+document.querySelector('#botao').addEventListener('click', diaData)
+
+function diaData() {
+    const dia = document.querySelector('#dia').value
+
+    if (dia === "sexta"){
+        document.querySelector('#localVer').innerText = "Sim hoje é sexta"
+    } else {
+        document.querySelector('#localVer').innerText = "Não, hoje não é " + dia
+    }
+}

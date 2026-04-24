@@ -90,7 +90,7 @@ function hardUm (a,b,c,d){
     if (resultUm > 100){
         let resultDois = c + d
         console.log(resultUm + resultDois)
-    }else if (resultUm < 100){
+    }else if (resultUm < 100){      
         let resultDois = c - d
         console.log(resultUm - resultDois)
     }else {

@@ -192,6 +192,19 @@ function crescParc(array){
 // Retorne true se:
 // - o primeiro número for menor que o último
 // - E existir pelo menos um número igual a 10
+function dupEsp(array){
+    let igDe = 0
+    array.forEach(element => {
+        if (element === 10){
+            igDe++
+        }
+    });
+     if (array[0] < array[array.length - 1] && igDe !== 0){
+            return(true)
+        }else {
+            return(false)
+        }
+}
 
 
 // *7. Transformação com índice*
@@ -199,7 +212,17 @@ function crescParc(array){
 // Retorne um novo array onde:
 // - elementos em índices pares são multiplicados por 2
 // - elementos em índices ímpares são divididos por 2
-
+function transIn (array){
+    let novArr = []
+    for (let i = 0;i < array.length;i++){
+        if (i % 2 === 0){
+            novArr.push(array[i] * 2)
+        }else {
+            novArr.push(array[i] / 2)
+        }
+    }
+    return(novArr)
+}
 
 // *8. Desafio final 🧠*
 // Crie uma função que receba um array de números.
@@ -207,3 +230,27 @@ function crescParc(array){
 // - quantos números são iguais ao primeiro elemento
 // - quantos números são iguais ao último elemento
 // - soma de todos os números que NÃO são iguais a nenhum desses dois
+function desFin(array){
+    let prim = 0
+    let ult = 0
+    let soma = 0
+
+    let primeiro = array[0]
+    let ultimo = array[array.length - 1]
+    array.forEach(element => {
+        if (element === primeiro){
+            prim++
+        }
+        if(element === ultimo){
+            ult++
+        }
+        if(element !== primeiro && element !== ultimo){
+            soma += element
+        }
+    }); 
+    return {
+        Primeiro: prim,
+        Último: ult,
+        Soma: soma
+    }
+}

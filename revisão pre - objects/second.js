@@ -107,7 +107,6 @@ function repCons(array){
     return false
 }
 
-
 // *8. Desafio final 🧠*
 // Crie uma função que receba um array de números.
 // Retorne um objeto contendo:
@@ -122,8 +121,8 @@ function desFin(array){
     let iguais = 0
     for (let i = array.length - 1;i >= 0;i--){
         if (array[i] % 2 ===0){
-                ultimoPar = i
-                break
+            ultimoPar = i
+            break
         }
     }
     for (let i = 0;i < array.length;i++){
@@ -151,5 +150,3 @@ function desFin(array){
         IguaisSegundo: iguais
     }
 }
-
-
